@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mikewazovzky/adjustable.svg?branch=master)](https://travis-ci.org/mikewazovzky/adjustable) 
+[![Coverage Status](https://coveralls.io/repos/github/mikewazovzky/adjustable/badge.svg?branch=master)](https://coveralls.io/github/mikewazovzky/adjustable?branch=master)
 
 <h2 align="center">
 	<img src="https://laravel.com/assets/img/components/logo-laravel.svg">
