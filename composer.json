@@ -1,6 +1,6 @@
 {
     "name": "mikewazovzky/adjustable",
-    "description": "Demo Package",
+    "description": "Laravel package tracks adjustment made to Eloquent Models. Before and after update field values as well as a User are saved for every database transaction.",
 	"keywords": ["laravel"],
     "license": "MIT",
     "authors": [

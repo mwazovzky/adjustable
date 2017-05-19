@@ -8,7 +8,7 @@
 ### Project: 
 mikewazovzky\adjustable
 ### Description
-Laravel Package allows app User to Favorite/Unfavorite model instance  
+Laravel package tracks adjustment made to Eloquent Models. Before and after update field values as well as a User are saved for every database transaction.
 #### Version: 0.0.1
 #### Change log:  
 0.0.1 initial project scaffolding
