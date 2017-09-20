@@ -15,7 +15,7 @@ Laravel package tracks adjustment made to Eloquent Models. Before and after upda
 #### Documentation
 See PHPDoc blocks in the code
 #### Installation.
-Pull the package into Laravel project through composer
+Pull the package into Laravel project through  composer
 ```
 composer require mikewazovzky/adjustable
 ```
