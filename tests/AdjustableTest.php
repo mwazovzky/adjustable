@@ -1,5 +1,7 @@
 <?php
 
+namespace Tests\Feature;
+
 use Illuminate\Database\Eloquent\Model;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -18,13 +20,13 @@ class AdjustableTest extends TestCase
     {
         parent::setUp();
 
-        Dummy::createTable();
+        \Dummy::createTable();
         $this->dummy = \Dummy::create(['name' => 'Mary']);
     }
 
     protected function tearDown()
     {
-        Dummy::deleteTable();
+        \Dummy::deleteTable();
     }
 
     /** @test */
