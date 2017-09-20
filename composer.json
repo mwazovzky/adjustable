@@ -13,12 +13,5 @@
         "psr-4": {
             "Mikewazovzky\\Adjustable\\": "src/"
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Mikewazovzky\\Adjustable\\AdjustableServiceProvider"
-            ]
-        }
     }
 }
