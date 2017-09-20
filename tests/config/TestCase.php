@@ -1,6 +1,6 @@
 <?php
 
-// namespace Tests;
+namespace Tests;
 
 use App\Exceptions\Handler;
 use Illuminate\Contracts\Debug\ExceptionHandler;
