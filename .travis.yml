@@ -12,7 +12,7 @@ before_script:
   - composer create-project laravel/laravel
   - cd ./laravel
   - composer config repositories.$GITHUB_NAME vcs https://github.com/$GITHUB_NAME/$PACKAGE_NAME.git
-  - composer require $GITHUB_NAME/$PACKAGE_NAME
+  - composer require $GITHUB_NAME/$PACKAGE_NAME dev-master
   - composer require satooshi/php-coveralls
   - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/.env ./
   - rm ./config/app.php

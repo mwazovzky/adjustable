@@ -21,7 +21,7 @@ composer require mikewazovzky/adjustable
 ```
 #### Testing package.
 1. create test laravel project
-2. copy `./env` file from `/tests/config/`
+2. copy `.env` file from `/tests/config/`
 3. include the Package Server Provider within your `/config/app.php` file
  ```
 \Mikewazovzky\Adjustable\FavoritableServiceProvider::class
