@@ -12,19 +12,19 @@ before_script:
   - composer create-project laravel/laravel
   - cd ./laravel
   - composer config repositories.$GITHUB_NAME vcs https://github.com/$GITHUB_NAME/$PACKAGE_NAME.git
-  - composer require $GITHUB_NAME/$PACKAGE_NAME dev-master
+  - composer require $GITHUB_NAME/$PACKAGE_NAME
   - composer require satooshi/php-coveralls
   - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/.env ./
   - rm ./config/app.php
   - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/app.php ./config
   - rm ./tests/TestCase.php
   - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/TestCase.php ./tests
-  - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/functions.php ./tests 
+  - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/functions.php ./tests
   - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/composer_autoload.php ./
   - php composer_autoload.php
   - composer dump-autoload
   - cd ./vendor/$GITHUB_NAME/$PACKAGE_NAME
-  - mkdir -p build/logs    
+  - mkdir -p build/logs
 
 script:
   - ../../../vendor/bin/phpunit --coverage-clover build/logs/clover.xml
