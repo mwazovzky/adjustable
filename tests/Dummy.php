@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Eloquent\Model;
 
 class Dummy extends Model
@@ -10,10 +11,10 @@ class Dummy extends Model
 
     public static function createTable()
     {
-        if (\Schema::hasTable(self::$tableName)) { 
-            return; 
+        if (\Schema::hasTable(self::$tableName)) {
+            return;
         }
-        
+
         \Schema::create(self::$tableName, function (\Illuminate\Database\Schema\Blueprint $table) {
             $table->increments('id');
             $table->string('name');

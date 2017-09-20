@@ -1,6 +1,6 @@
 <?php
-namespace Tests\Feature;
 
+use Illuminate\Database\Eloquent\Model;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
@@ -11,51 +11,51 @@ class AdjustableTest extends TestCase
 
     public static function setUpBeforeClass()
     {
-        echo 'Mikewazovzky\Adjustable Unit Tests '; 
+        echo 'Mikewazovzky\Adjustable Unit Tests ';
     }
 
     protected function setUp()
     {
         parent::setUp();
-		
-        \Dummy::createTable();           
-        $this->dummy = \Dummy::create(['name' => 'Mary']); 
+
+        Dummy::createTable();
+        $this->dummy = \Dummy::create(['name' => 'Mary']);
     }
 
     protected function tearDown()
     {
-        \Dummy::deleteTable();           
-    }    
+        Dummy::deleteTable();
+    }
 
     /** @test */
     function it_does_something()
-    {		
+    {
 		$this->assertTrue(true);
     }
 
     /** @test */
-    function it_can_create_dummy_model() 
+    function it_can_create_dummy_model()
     {
         $this->assertDatabaseHas('dummies', [
             'name' => $this->dummy->name
         ]);
-    }       
-	
+    }
+
     /** @test */
-    function it_can_log_dummy_model_update() 
+    function it_can_log_dummy_model_update()
     {
-        $this->signIn();
-		
+        $this->be(factory('App\User')->create());
+
 		$this->dummy->update(['name' => 'NewName']);
-		
+
 		// dd($this->dummy->adjustments);
-		
+
 		$this->assertDatabaseHas('adjustables', [
 			'user_id' => Auth()->id(),
 			'adjustable_id' => $this->dummy->id,
 			'adjustable_type' => 'Dummy',
             'before' => '{"name":"Mary"}',
-			'after' => '{"name":"NewName"}',			
+			'after' => '{"name":"NewName"}',
         ]);
-    }    	
+    }
 }
