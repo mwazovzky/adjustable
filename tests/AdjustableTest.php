@@ -32,7 +32,7 @@ class AdjustableTest extends TestCase
     /** @test */
     function it_does_something()
     {
-		$this->assertTrue(true);
+        $this->assertTrue(true);
     }
 
     /** @test */
@@ -48,16 +48,16 @@ class AdjustableTest extends TestCase
     {
         $this->be(factory('App\User')->create());
 
-		$this->dummy->update(['name' => 'NewName']);
+        $this->dummy->update(['name' => 'NewName']);
 
-		// dd($this->dummy->adjustments);
+        // dd($this->dummy->adjustments);
 
-		$this->assertDatabaseHas('adjustables', [
-			'user_id' => Auth()->id(),
-			'adjustable_id' => $this->dummy->id,
-			'adjustable_type' => 'Dummy',
+        $this->assertDatabaseHas('adjustables', [
+            'user_id' => Auth()->id(),
+            'adjustable_id' => $this->dummy->id,
+            'adjustable_type' => 'Dummy',
             'before' => '{"name":"Mary"}',
-			'after' => '{"name":"NewName"}',
+            'after' => '{"name":"NewName"}',
         ]);
     }
 }
