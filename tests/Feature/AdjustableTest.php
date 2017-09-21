@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use Illuminate\Database\Eloquent\Model;
 use Tests\TestCase;
+use Tests\Dummy;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class AdjustableTest extends TestCase
@@ -20,13 +21,13 @@ class AdjustableTest extends TestCase
     {
         parent::setUp();
 
-        \Dummy::createTable();
-        $this->dummy = \Dummy::create(['name' => 'Mary']);
+        Dummy::createTable();
+        $this->dummy = Dummy::create(['name' => 'Mary']);
     }
 
     protected function tearDown()
     {
-        \Dummy::deleteTable();
+        Dummy::deleteTable();
     }
 
     /** @test */
@@ -55,7 +56,6 @@ class AdjustableTest extends TestCase
         $this->assertDatabaseHas('adjustables', [
             'user_id' => Auth()->id(),
             'adjustable_id' => $this->dummy->id,
-            'adjustable_type' => 'Dummy',
             'before' => '{"name":"Mary"}',
             'after' => '{"name":"NewName"}',
         ]);
