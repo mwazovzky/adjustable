@@ -5,7 +5,7 @@ try {
 
     $myFile['autoload']['psr-4']["Mikewazovzky\\Adjustable\\"] = 'vendor/Mikewazovzky/Adjustable/src/';
     // $myFile['autoload-dev']['files'] = [ 'tests/functions.php' ];
-    $myFile['autoload-dev']['classmap'] = [ 'vendor/Mikewazovzky/Adjustable/tests' ];
+    // $myFile['autoload-dev']['classmap'] = [ 'vendor/Mikewazovzky/Adjustable/tests' ];
 
     file_put_contents('composer.json', json_encode($myFile, JSON_PRETTY_PRINT)); // JSON_UNESCAPED_SLASHES));
 } catch (Exception $e) {
