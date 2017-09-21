@@ -17,7 +17,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mikewazovzky\\Demopackage\\DemopackageServiceProvider"
+                "Mikewazovzky\\Adjustable\\AdjustableServiceProvider"
             ]
         }
     }
