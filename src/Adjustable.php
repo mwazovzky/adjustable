@@ -1,22 +1,24 @@
 <?php
+
 namespace Mikewazovzky\Adjustable;
+
 /**
  * @trait Adjustable
  * allows to track changes for \Illuminate\Database\Eloquent\Model
  */
 trait Adjustable
 {
-	/**
+    /**
      * Trigger changes (adjustments) log every tyme Model is updated,
-     * via Model 'updating' event handler 
+     * via Model 'updating' event handler
      */
     public static function boot()
     {
         parent::boot();
 
-        static::updating(function($client){
+        static::updating(function ($client) {
             $client->logAdjustment();
-        });      
+        });
     }
     /**
      * Log the adjustment
@@ -33,11 +35,11 @@ trait Adjustable
     /**
      * Define the adjustment (change):
      *
-     * @return array ['before' => $before, 'after' => $after], 
+     * @return array ['before' => $before, 'after' => $after],
      *  where
      *  $before is json encoded before update object { key: value ...}
      *  $after is json encoded after update object { key: value ...}
-     *  Only modified fields (keys) are included.    
+     *  Only modified fields (keys) are included.
      */
     public function getDifference()
     {
@@ -49,11 +51,11 @@ trait Adjustable
         return compact('before', 'after');
     }
     /**
-     * Model can have many adjustments, polimorphic relation based on a pivot table 
-     * 
+     * Model can have many adjustments, polimorphic relation based on a pivot table
+     *
      * @return Illuminate\Database\Eloquent\Relations\morphToMany
-     * Model timestamps, before and after fiels are eager loaded, 
-     * Returned query is sorted by adjustment update_at date 
+     * Model timestamps, before and after fiels are eager loaded,
+     * Returned query is sorted by adjustment update_at date
      */
     public function adjustments()
     {
