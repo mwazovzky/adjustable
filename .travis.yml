@@ -18,7 +18,7 @@ before_script:
   - rm ./config/app.php
   - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/app.php ./config
   # rm ./tests/TestCase.php
-  # cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/TestCase.php ./tests
+  - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/Dummy.php ./tests
   # cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/functions.php ./tests
   - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/composer_autoload.php ./
   - php composer_autoload.php
