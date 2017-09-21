@@ -11,8 +11,6 @@ before_script:
   - composer self-update
   - composer create-project laravel/laravel
   - cd ./laravel
-  # try it ...
-  - composer config --global github-protocols 'https'
   - composer config repositories.$GITHUB_NAME vcs https://github.com/$GITHUB_NAME/$PACKAGE_NAME.git
   - composer require $GITHUB_NAME/$PACKAGE_NAME dev-master
   - composer require satooshi/php-coveralls
