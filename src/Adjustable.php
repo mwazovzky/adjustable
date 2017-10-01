@@ -12,10 +12,8 @@ trait Adjustable
      * Trigger changes (adjustments) log every tyme Model is updated,
      * via Model 'updating' event handler
      */
-    public static function boot()
+    public static function bootAdjustable()
     {
-        parent::boot();
-
         static::updating(function ($client) {
             $client->logAdjustment();
         });
