@@ -8,7 +8,10 @@
 ### Project:
 mikewazovzky\adjustable
 ### Description
-Laravel package tracks adjustment made to Eloquent Models. Before and after update field values as well as a User are saved for every database transaction.
+Laravel package that tracks adjustments made to Eloquent Model(s).
+Before and after update values for the fields that have been changed
+as well as currently authenticated User
+are saved for every database operation with the Model.
 #### Version: 0.0.1
 #### Change log:
 0.0.1 initial project scaffolding
@@ -17,12 +20,12 @@ See PHPDoc blocks in the code
 #### Installation.
 Pull the package into Laravel project through  composer
 ```
-composer require mikewazovzky/adjustable
+$ composer require mikewazovzky/adjustable
 ```
 #### Testing package.
 1. create test laravel project
 2. copy `.env` file from `/tests/config/`
-3. for Laravel 5.4 or below add Package Server Provider within your `/config/app.php` file
+3. for Laravel 5.4 or below register Package Server Provider class within `/config/app.php` file
  ```
 \Mikewazovzky\Adjustable\FavoritableServiceProvider::class
 ```
@@ -35,7 +38,7 @@ composer require mikewazovzky/adjustable
 ```
 Run PHPUnit from package folder
 ```
-../../../laravel/5.4.x/vendor/bin/phpunit
+$ ../../../laravel/5.4.x/vendor/bin/phpunit
 ```
 
 

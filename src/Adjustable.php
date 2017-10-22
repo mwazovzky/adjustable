@@ -18,6 +18,7 @@ trait Adjustable
             $client->logAdjustment();
         });
     }
+
     /**
      * Log the adjustment
      *
@@ -30,6 +31,7 @@ trait Adjustable
 
         return $this->adjustments()->attach($userId, $this->getDifference());
     }
+
     /**
      * Define the adjustment (change):
      *
@@ -48,6 +50,7 @@ trait Adjustable
 
         return compact('before', 'after');
     }
+
     /**
      * Model can have many adjustments, polimorphic relation based on a pivot table
      *

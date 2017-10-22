@@ -2,20 +2,16 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Database\Eloquent\Model;
-use Tests\TestCase;
 use Tests\Dummy;
+use Tests\TestCase;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class AdjustableTest extends TestCase
 {
     use DatabaseMigrations;
-    protected $dummy;
 
-    public static function setUpBeforeClass()
-    {
-        echo 'Mikewazovzky\Adjustable Unit Tests ';
-    }
+    protected $dummy;
 
     protected function setUp()
     {
@@ -31,30 +27,14 @@ class AdjustableTest extends TestCase
     }
 
     /** @test */
-    function it_does_something()
-    {
-        $this->assertTrue(true);
-    }
-
-    /** @test */
-    function it_can_create_dummy_model()
-    {
-        $this->assertDatabaseHas('dummies', [
-            'name' => $this->dummy->name
-        ]);
-    }
-
-    /** @test */
-    function it_can_log_dummy_model_update()
+    function it_can_log_model_update()
     {
         $this->be(factory('App\User')->create());
 
         $this->dummy->update(['name' => 'NewName']);
 
-        // dd($this->dummy->adjustments);
-
         $this->assertDatabaseHas('adjustables', [
-            'user_id' => Auth()->id(),
+            'user_id' => auth()->id(),
             'adjustable_id' => $this->dummy->id,
             'before' => '{"name":"Mary"}',
             'after' => '{"name":"NewName"}',
