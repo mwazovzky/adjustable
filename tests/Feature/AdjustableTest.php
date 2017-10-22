@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Tests\Dummy;
 use Tests\TestCase;
 use Illuminate\Database\Eloquent\Model;
+use Mikewazovzky\Adjustable\Models\Adjustment;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class AdjustableTest extends TestCase
@@ -13,10 +14,14 @@ class AdjustableTest extends TestCase
 
     protected $dummy;
 
+    /**
+     * Create adjustable Dummy model and table
+     *
+     * @return void
+     */
     protected function setUp()
     {
         parent::setUp();
-
         Dummy::createTable();
         $this->dummy = Dummy::create(['name' => 'Mary']);
     }
@@ -27,11 +32,13 @@ class AdjustableTest extends TestCase
     }
 
     /** @test */
-    function it_can_log_model_update()
+    function it_records_model_adjustments()
     {
         $this->be(factory('App\User')->create());
 
         $this->dummy->update(['name' => 'NewName']);
+
+        $this->assertCount(1, $this->dummy->adjustments);
 
         $this->assertDatabaseHas('adjustables', [
             'user_id' => auth()->id(),

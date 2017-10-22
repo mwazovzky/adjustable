@@ -2,6 +2,8 @@
 
 namespace Mikewazovzky\Adjustable;
 
+use Mikewazovzky\Adjustable\Models\Adjustment;
+
 /**
  * @trait Adjustable
  * allows to track changes for \Illuminate\Database\Eloquent\Model
@@ -29,7 +31,7 @@ trait Adjustable
     {
         $userId = $userId ?: \Auth::id();
 
-        return $this->adjustments()->attach($userId, $this->getDifference());
+        return $this->adjustedBy()->attach($userId, $this->getDifference());
     }
 
     /**
@@ -58,11 +60,16 @@ trait Adjustable
      * Model timestamps, before and after fiels are eager loaded,
      * Returned query is sorted by adjustment update_at date
      */
-    public function adjustments()
+    public function adjustedBy()
     {
         return $this->morphToMany(\App\User::class, 'adjustable')
             ->withTimestamps()
             ->withPivot(['before', 'after'])
             ->latest('pivot_updated_at');
+    }
+
+    public function adjustments()
+    {
+        return $this->morphMany(Adjustment::class, 'adjustable');
     }
 }
