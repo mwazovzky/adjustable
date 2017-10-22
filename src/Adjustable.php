@@ -70,6 +70,6 @@ trait Adjustable
 
     public function adjustments()
     {
-        return $this->morphMany(Adjustment::class, 'adjustable');
+        return $this->morphMany(Adjustment::class, 'adjustable')->latest();
     }
 }
