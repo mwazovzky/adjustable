@@ -72,4 +72,9 @@ trait Adjustable
     {
         return $this->morphMany(Adjustment::class, 'adjustable')->latest();
     }
+
+    public function lastAdjustments($limit = 5)
+    {
+        return $this->adjustments()->take($limit);
+    }
 }
