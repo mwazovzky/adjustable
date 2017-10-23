@@ -519,6 +519,23 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Adjustable/src/Adjustable.php",
+			"settings":
+			{
+				"buffer_size": 2179,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Adjustable/readme.md",
+			"settings":
+			{
+				"buffer_size": 1435,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -592,7 +609,8 @@
 	},
 	"expanded_folders":
 	[
-		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Adjustable"
+		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Adjustable",
+		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Adjustable/src"
 	],
 	"file_history":
 	[
@@ -758,8 +776,67 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Adjustable/src/Adjustable.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1751,
+								1751
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1170.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Adjustable/readme.md",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1435,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1386,
+								1427
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 810.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],

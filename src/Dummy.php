@@ -1,14 +1,16 @@
 <?php
 
-namespace Tests;
+namespace Mikewazovzky\Adjustable;
 
+use Mikewazovzky\Adjustable\Adjustable;
 use Illuminate\Database\Eloquent\Model;
 
 class Dummy extends Model
 {
-    use \Mikewazovzky\Adjustable\Adjustable;
+    use Adjustable;
 
     protected static $tableName = 'dummies';
+    protected $table = 'dummies';
     protected $guarded = [];
 
     public static function createTable()

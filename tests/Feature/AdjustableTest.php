@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use Tests\Dummy;
-use Tests\TestCase;
-use Illuminate\Database\Eloquent\Model;
+use Mikewazovzky\Adjustable\Dummy;
 use Mikewazovzky\Adjustable\Models\Adjustment;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Tests\TestCase;
 
 class AdjustableTest extends TestCase
 {
@@ -47,4 +47,13 @@ class AdjustableTest extends TestCase
             'after' => '{"name":"NewName"}',
         ]);
     }
+
+    // /** @test */
+    // public function it_can_fetch_adjustmets()
+    // {
+    //     $this->be(factory('App\User')->create());
+    //     $this->dummy->update(['name' => 'NewName']);
+    //     $response = $this->getJson("/model/{$this->dummy->id}/adjustments")->json();
+    //     $this->assertCount(1, $response);
+    // }
 }
