@@ -1,6 +1,6 @@
 <?php
 
-namespace Mikewazovzky\Adjustable;
+namespace MWazovzky\Adjustable;
 
 use Illuminate\Support\ServiceProvider;
 

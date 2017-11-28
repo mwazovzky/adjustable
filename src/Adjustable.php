@@ -1,8 +1,8 @@
 <?php
 
-namespace Mikewazovzky\Adjustable;
+namespace MWazovzky\Adjustable;
 
-use Mikewazovzky\Adjustable\Models\Adjustment;
+use MWazovzky\Adjustable\Models\Adjustment;
 
 /**
  * @trait Adjustable

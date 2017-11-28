@@ -176,11 +176,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-		
+
         /*
          * Custom Packages Service Providers...
          */
-		Mikewazovzky\Adjustable\AdjustableServiceProvider::class 
+		MWazovzky\Adjustable\AdjustableServiceProvider::class
     ],
 
     /*

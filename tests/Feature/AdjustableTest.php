@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use Mikewazovzky\Adjustable\Dummy;
-use Mikewazovzky\Adjustable\Models\Adjustment;
+use MWazovzky\Adjustable\Dummy;
+use MWazovzky\Adjustable\Models\Adjustment;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;

@@ -6,7 +6,7 @@ php:
   - 7.1
 
 before_script:
-  - GITHUB_NAME=mikewazovzky
+  - GITHUB_NAME=mwazovzky
   - PACKAGE_NAME=adjustable
   - composer self-update
   - composer create-project laravel/laravel

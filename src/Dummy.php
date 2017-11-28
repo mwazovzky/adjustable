@@ -1,8 +1,8 @@
 <?php
 
-namespace Mikewazovzky\Adjustable;
+namespace MWazovzky\Adjustable;
 
-use Mikewazovzky\Adjustable\Adjustable;
+use MWazovzky\Adjustable\Adjustable;
 use Illuminate\Database\Eloquent\Model;
 
 class Dummy extends Model

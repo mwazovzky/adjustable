@@ -1,5 +1,5 @@
 {
-    "name": "mikewazovzky/adjustable",
+    "name": "mwazovzky/adjustable",
     "description": "Laravel package tracks adjustment made to Eloquent Models. Before and after update field values as well as a User are saved for every database transaction.",
 	"keywords": ["laravel"],
     "license": "MIT",
@@ -11,13 +11,13 @@
     ],
 	"autoload": {
         "psr-4": {
-            "Mikewazovzky\\Adjustable\\": "src/"
+            "MWwazovzky\\Adjustable\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Mikewazovzky\\Adjustable\\AdjustableServiceProvider"
+                "MWazovzky\\Adjustable\\AdjustableServiceProvider"
             ]
         }
     }
