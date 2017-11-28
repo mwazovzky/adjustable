@@ -6,7 +6,7 @@
 </h2>
 
 ### Project:
-mikewazovzky\adjustable
+mwazovzky\adjustable
 ### Description
 Laravel package that tracks adjustments made to Eloquent Model(s).
 Before and after update values for the fields that have been changed
