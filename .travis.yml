@@ -11,12 +11,13 @@ before_script:
   - composer self-update
   - composer create-project laravel/laravel
   - cd ./laravel
+  # loads package from github
+  - composer config repositories.$GITHUB_NAME vcs https://github.com/$GITHUB_NAME/$PACKAGE_NAME.git
   - composer require $GITHUB_NAME/$PACKAGE_NAME dev-master
   - composer require satooshi/php-coveralls
   - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/.env ./
   - rm ./config/app.php
   - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/app.php ./config
-  #- cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/Dummy.php ./tests
   - cp ./vendor/$GITHUB_NAME/$PACKAGE_NAME/tests/config/composer_autoload.php ./
   - php composer_autoload.php
   - composer dump-autoload
