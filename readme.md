@@ -18,10 +18,30 @@ are saved for every database operation with the Model.
 #### Documentation
 See PHPDoc blocks in the code
 #### Installation.
-Pull the package into Laravel project through  composer
+Pull the package into Laravel project through composer
 ```
 $ composer require mwazovzky/adjustable
 ```
+Publish and run package migrations
+```
+$ php artisan vendor:publish --tag=migrations --force
+$ php artisan migrate
+```
+Use trait Adjustable for every Model that needs to track its adjustments.
+```
+<?php
+namespace App;
+
+use MWazovzky\Adjustable\Adjustable;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use Adjustable;
+    ...
+}
+```
+
 
 
 
