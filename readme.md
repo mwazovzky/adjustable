@@ -12,9 +12,10 @@ Laravel package that tracks adjustments made to Eloquent Model(s).
 Before and after update values for the fields that have been changed
 as well as currently authenticated User
 are saved for every database operation with the Model.
-#### Version: 0.0.1
+#### Version: 0.0.10
 #### Change log:
-0.0.1 initial project scaffolding
+0.0.10 project official name and documentation
+0.0.1  initial project scaffolding
 #### Documentation
 See PHPDoc blocks in the code
 #### Installation.
