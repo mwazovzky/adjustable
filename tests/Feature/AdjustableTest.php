@@ -19,14 +19,14 @@ class AdjustableTest extends TestCase
      *
      * @return void
      */
-    protected function setUp()
+    public function setUp() : void
     {
         parent::setUp();
         Dummy::createTable();
         $this->dummy = Dummy::create(['name' => 'Mary']);
     }
 
-    protected function tearDown()
+    protected function tearDown() : void
     {
         Dummy::deleteTable();
     }
